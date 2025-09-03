@@ -22,3 +22,74 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# ========================
+# Build tools
+# ========================
+
+# Maven
+target/
+
+# Gradle (se algum dia usar)
+build/
+
+# ========================
+# IDEs / Editors
+# ========================
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/
+dist/
+nbbuild/
+build/
+
+# ========================
+# Logs / Temp
+# ========================
+
+*.log
+*.tmp
+*.swp
+*.swo
+
+# ========================
+# Spring Boot configs
+# ========================
+
+# Ignorar configs sensíveis (mas manter arquivos exemplo)
+application-*.properties
+application-*.yml
+
+# ========================
+# Databases locais
+# ========================
+
+*.h2.db
+*.mv.db
+*.trace.db
+
+# ========================
+# OS / Misc
+# ========================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+src/main/resources/application.properties
