@@ -1,4 +1,4 @@
-package com.example.reminder_api;
+package com.api.reminder;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
