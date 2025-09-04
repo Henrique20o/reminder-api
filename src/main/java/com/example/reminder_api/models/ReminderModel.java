@@ -3,7 +3,7 @@ package com.example.reminder_api.models;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
@@ -17,7 +17,7 @@ public class ReminderModel implements Serializable {
     @Column(nullable = false, length = 100)
     private String title;
     @Column(nullable = false)
-    private LocalDateTime date;
+    private LocalDate date;
 
     public UUID getId() {
         return id;
@@ -35,11 +35,11 @@ public class ReminderModel implements Serializable {
         this.title = title;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 }
