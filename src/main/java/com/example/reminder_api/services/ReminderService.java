@@ -2,11 +2,15 @@ package com.example.reminder_api.services;
 
 import com.example.reminder_api.dtos.ReminderDto;
 import com.example.reminder_api.models.ReminderModel;
-import com.example.reminder_api.repositores.ReminderRepository;
+import com.example.reminder_api.repositories.ReminderRepository;
 import com.example.reminder_api.validators.ReminderValidator;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class ReminderService {
@@ -31,4 +35,15 @@ public class ReminderService {
         reminderModel.setDate(reminderDto.getDate());
         return  reminderRepository.save(reminderModel);
     }
+
+    public ReminderModel deleteReminder(UUID id) {
+        Optional<ReminderModel> optionalReminderModel = reminderRepository.findById(id);
+        if (optionalReminderModel.isPresent()) {
+            reminderRepository.deleteById(id);
+            return optionalReminderModel.get();
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Reminder not found");
+        }
+    }
+
 }

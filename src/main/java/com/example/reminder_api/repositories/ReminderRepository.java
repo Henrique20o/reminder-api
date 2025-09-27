@@ -1,4 +1,4 @@
-package com.example.reminder_api.repositores;
+package com.example.reminder_api.repositories;
 
 import com.example.reminder_api.models.ReminderModel;
 import org.springframework.data.jpa.repository.JpaRepository;
