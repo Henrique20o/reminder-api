@@ -13,8 +13,6 @@ public class ReminderDto {
     private String title;
 
     @NotNull
-    @JsonFormat(pattern = "dd/MM/yyyy")
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private LocalDate date;
 
     public String getTitle() {
